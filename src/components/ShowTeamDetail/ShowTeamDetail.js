@@ -13,6 +13,10 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+// icon
+import { FaFacebookF  ,FaWhatsappSquare} from 'react-icons/fa';
+
+import {  AiFillTwitterSquare } from "react-icons/ai";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -78,6 +82,11 @@ const ShowTeamDetail = () => {
         </Grid>
         
       </Grid>
+      <footer style={{margin:'30px 40%'}}>
+          <a href="https://www.facebook.com/">   <FaFacebookF size='2em'/></a>
+          <a href="https://twitter.com/?lang=en"><AiFillTwitterSquare  size='2em's/></a>
+          <a href="https://www.whatsapp.com/?lang=en"><FaWhatsappSquare size='2em'/></a>
+      </footer>
     </div>
     );
 };
