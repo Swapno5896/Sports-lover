@@ -39,14 +39,10 @@ const Home = () => {
         hexColor += colors[randomNumber];
         }
         console.log(hexColor);
-       
         document.body.style.backgroundColor = hexColor;
- 
-
-    }
+     }
     function getRandomNumber() {
-        return Math.floor(Math.random() * colors.length);
-       
+        return Math.floor(Math.random() * colors.length);       
       }
      
     return (
