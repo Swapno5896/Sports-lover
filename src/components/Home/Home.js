@@ -6,7 +6,7 @@ import ShowTeams from '../ShowTeams/ShowTeams'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
+import './Home.css'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,13 +30,33 @@ const Home = () => {
             setLeags(data.countrys)
         })
     },[])
+    //backGround color
+    const colors = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+    function changeBackgroundColor(){
+        var hexColor = '#'
+        const randomNumber = getRandomNumber();
+        for (let i = 0; i < 6; i++) {
+        hexColor += colors[randomNumber];
+        }
+        console.log(hexColor);
+       
+        document.body.style.backgroundColor = hexColor;
+ 
+
+    }
+    function getRandomNumber() {
+        return Math.floor(Math.random() * colors.length);
+       
+      }
+     
     return (
-        <div>
+        <div className='home' >
+            <button onClick={changeBackgroundColor}>Change Color</button>
             {/* <button><FontAwesomeIcon icon={faCoffee} />Home</button> */}
             <div className={classes.root}>
                 <Grid container style={{padding:'0px 20%'}} >
             {
-                leags.map(leag=><ShowTeams leag={leag}></ShowTeams>)
+                leags.map(leag=><ShowTeams key={leag.idLeague} leag={leag}></ShowTeams>)
             }
                 </Grid>
             </div>

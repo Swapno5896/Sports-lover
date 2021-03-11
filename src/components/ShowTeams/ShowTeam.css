@@ -1,0 +1,12 @@
+.team img{
+ padding: 20%;
+}
+.team p,h3{
+    text-align: center;
+}
+.team:hover{
+    box-shadow: 2px 2px 20px rgb(145, 131, 131);
+}
+.team{
+    border: 1px solid rgb(224, 219, 219);
+}
