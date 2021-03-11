@@ -1,12 +1,7 @@
 import React, { useState,useEffect } from "react";
 import './ShowTeamDetail.css'
-
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useHistory,
   useParams
 } from "react-router-dom";
 // material ui grid
@@ -15,7 +10,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // icon
 import { FaFacebookF  ,FaWhatsappSquare} from 'react-icons/fa';
-
 import {  AiFillTwitterSquare } from "react-icons/ai";
 
 const useStyles = makeStyles((theme) => ({
@@ -44,8 +38,6 @@ const ShowTeamDetail = () => {
 
     // material ui
     const classes = useStyles();
-
-    // console.log(strGender);
     return (
       <div className={classes.root}>
       <Grid container spacing={3}>
