@@ -42,7 +42,7 @@ const ShowTeams = (props) => {
                         <h3>{strLeagueAlternate}</h3>
                         
                         <p>{strCountry} </p>
-                        <button onClick={handleClick}>Detail <FontAwesomeIcon icon={faArrowRight} /></button>
+                        <button style={{margin:'0px 40%'}} onClick={handleClick}>Explore <FontAwesomeIcon icon={faArrowRight} /></button>
                         {/* <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faChevronRight} /></a> */}
                     </Paper>
                 </Grid> 

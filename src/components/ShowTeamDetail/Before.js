@@ -1,6 +1,4 @@
 import React, { useState,useEffect } from "react";
-import './ShowTeamDetail.css'
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -43,42 +41,97 @@ const ShowTeamDetail = () => {
 
     // console.log(strGender);
     return (
-      <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper} id='headeImg'>
+        <div>
+          <div >
+          </div>
+    <Grid container spacing={3}>       
+        <Grid item  xs={12} sm={12} md={12} >
+          <Paper className={classes.paper} style={{width:'300px'}}>
           { strFanart1 ?
-            <img  src={strFanart1} alt=""/>
+            <img style={{width:"250%",height:'200px',padding:'0px 50%'}} src={strFanart1} alt=""/>
             :
-            <img  src={strLogo} alt=""/>
+            <img style={{width:"250%",height:'200px',padding:'0px 50%'}} src={strLogo} alt=""/>
            }
           </Paper>
         </Grid>
-        {/* done img */}
-        <Grid item xs={12} md={6} sm={6}>
+      </Grid>
+           
+         
+            {/* <img src="https://i.ibb.co/9Ydw3P1/female.png" alt=""/> */}
+
+            {/* 
+             */}
+      <Grid container style={{alignItems:'center', padding:'0px 20%'}} >
+             
+
+        
+        <Grid item xs={3}>
           <Paper className={classes.paper}>
           <h3>{strLeague} {strGender}</h3>
                   <h3>Founded : {intFormedYear}</h3>
                   <h3>Gender : {strGender}</h3>
           </Paper>
         </Grid>
-        {/* small discription done*/}
-        <Grid item xs={12} md={6} sm={6}>
-          <Paper className={classes.paper}>
 
-                 {
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>
+          { 
                     strGender==='Male' 
                     ? <img style={{width:"40%"}} src="https://i.ibb.co/pr76nbT/male.png" alt=""/>
                     :  <img style={{width:"40%"}} src="https://i.ibb.co/9Ydw3P1/female.png" alt=""/>
                   }
           </Paper>
         </Grid>
+            
+      </Grid>
+
+
+
+
+
+
+
+
+
+      <Grid item  xs={12} sm={12} md={12} style={{padding:'0px 50px'}}>
+          <Paper >
+            <p>{strDescriptionEN}</p>
+            </Paper>
+      </Grid>
+//
+
+
+
+
+
+<div className={classes.root}>
+      <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>  <p>{strDescriptionEN}</p></Paper>
+          <Paper className={classes.paper}>xs=12</Paper>
         </Grid>
-        
+        <Grid item xs={6}>
+          <Paper className={classes.paper}>xs=6</Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}>xs=6</Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>xs=3</Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>xs=3</Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>xs=3</Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>xs=3</Paper>
+        </Grid>
       </Grid>
     </div>
+
+
+        </div>
     );
 };
 

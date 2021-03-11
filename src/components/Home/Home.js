@@ -46,8 +46,27 @@ const Home = () => {
       }
      
     return (
-        <div className='home' >
-            <button onClick={changeBackgroundColor}>Change Color</button>
+        <div >
+            {/*  */}
+            <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Paper className={classes.paper} id='headeImg'>
+
+          <img style={{height:'200px'}} src="https://i.ibb.co/64Lxv2b/association-football-culture-fan-clip-art-vector-football-figures-thumbnail.jpg" alt=""/>
+
+          </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+          <button style={{}} onClick={changeBackgroundColor}>Change Background Color</button>
+
+          </Paper>
+        </Grid>
+      </Grid>
+    </div>
+            
+
             {/* <button><FontAwesomeIcon icon={faCoffee} />Home</button> */}
             <div className={classes.root}>
                 <Grid container style={{padding:'0px 20%'}} >
